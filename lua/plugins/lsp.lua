@@ -55,6 +55,9 @@ return {
           border = _border,
           focused = false,
         },
+        hover = {
+          border = _border,
+        },
         underline = true,
         update_in_insert = false,
         severity_sort = true,
@@ -67,13 +70,14 @@ return {
           local map = vim.keymap.set
 
           map("n", "gd", vim.lsp.buf.definition, opts)
-          map("n", "K", vim.lsp.buf.hover, opts)
+          map("n", "K", function ()
+            vim.lsp.buf.hover { border = _border }
+          end, opts)
           map("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
           map("n", "<leader>vd", vim.diagnostic.open_float, opts)
           map("n", "<leader>vca", vim.lsp.buf.code_action, opts)
           map("n", "<leader>vrr", vim.lsp.buf.references, opts)
           map("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-          map("i", "<C-h>", vim.lsp.buf.signature_help, opts)
         end,
       })
 
