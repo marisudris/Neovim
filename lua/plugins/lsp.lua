@@ -33,6 +33,8 @@ return {
       "mason-org/mason-lspconfig.nvim",
     },
     config = function()
+      local _border = "rounded"
+
       -- Diagnostic Configuration
       vim.diagnostic.config({
         virtual_text = {
@@ -50,8 +52,8 @@ return {
         float = {
           header = "",
           prefix = "",
-          border = "rounded",
-          focusable = true,
+          border = _border,
+          focused = false,
         },
         underline = true,
         update_in_insert = false,
@@ -79,8 +81,8 @@ return {
       vim.lsp.config('*', {
         capabilities = require('blink.cmp').get_lsp_capabilities(),
         window = {
-          hover = { border = "rounded" },
-          signature_help = { border = "rounded" },
+          hover = { border = _border },
+          signature_help = { border = _border },
         }
       })
 
