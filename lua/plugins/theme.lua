@@ -25,12 +25,18 @@ return {
       FloatBorder                 = { fg = p.pine, bg = "NONE" },
       DiagnosticFloatingBorder    = { fg = p.pine, bg = "NONE" },
 
-      -- Background colros
+      -- Background colors
       BlinkCmpMenu          = { bg = "NONE" },
       BlinkCmpMenuSelection = { fg = p.text, bg = p.overlay, bold = true },
       BlinkCmpSignatureHelp = { bg = "NONE" },
       BlinkCmpDoc           = { bg = "NONE" },
       NormalFloat           = { bg = "NONE" },
+
+      -- Dynamic border colors according to error severity levels
+      DiagnosticBorderError = { fg = p.love, bg = "NONE" },
+      DiagnosticBorderWarn  = { fg = p.gold, bg = "NONE" },
+      DiagnosticBorderInfo  = { fg = p.foam, bg = "NONE" },
+      DiagnosticBorderHint  = { fg = p.iris, bg = "NONE" },
     }
 
     for group, settings in pairs(groups) do
