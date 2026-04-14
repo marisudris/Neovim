@@ -9,6 +9,9 @@ return {
     keymap = {
       preset = "default",
     },
+    snippets = {
+      preset = "luasnip"
+    },
     -- Completion menu settings
     completion = {
       menu = {
