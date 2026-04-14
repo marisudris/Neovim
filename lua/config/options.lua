@@ -6,6 +6,8 @@ local opt = vim.opt
 
 opt.nu = true
 opt.relativenumber = true
+opt.signcolumn = "number"
+opt.numberwidth = 4;
 
 opt.tabstop = 4
 opt.softtabstop = 4
