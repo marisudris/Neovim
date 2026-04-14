@@ -2,7 +2,7 @@ return {
   "mason-org/mason.nvim",
   lazy = false,
   opts = {
-    -- Only formatters/Linters here
+    -- Listing only formatters/Linters here (language servers in lsp.lua)
     ensure_installed = {
       "phpcs",
       "php-cs-fixer",
