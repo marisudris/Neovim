@@ -23,6 +23,11 @@ return {
       end,
       desc = "Live Grep"
     },
+    {
+      "<leader>st",
+      "<cmd>TodoTelescope<cr>",
+      desc = "Search TODOs",
+    },
   },
   config = function()
     -- You can add extra Telescope setup here (like themes or ignored patterns)
