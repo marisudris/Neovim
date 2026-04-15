@@ -13,12 +13,14 @@ return {
     require("mason").setup(opts)
     local mr = require("mason-registry")
 
-    -- Auto-install formatters/linters
-    for _, tool in ipairs(opts.ensure_installed) do
-      local p = mr.get_package(tool)
-      if not p:is_installed() then
-        p:install()
+    -- Ensure registry is ready before using it and auto-install everything
+    mr.refresh(function()
+      for _, tool in ipairs(opts.ensure_installed) do
+        local ok, pkg = pcall(mr.get_package, tool)
+        if ok and not pkg:is_installed() then
+          pkg:install()
+        end
       end
-    end
+    end)
   end,
 }
