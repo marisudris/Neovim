@@ -7,6 +7,7 @@ tools.lsp = {
   intelephense = {
     settings = {
       intelephense = {
+        format = { enable = false },
         files = { maxSize = 5000000 },
       },
     },
