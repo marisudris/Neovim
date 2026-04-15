@@ -1,28 +1,5 @@
-local servers = {
-  html = {},
-  cssls = {},
-  ts_ls = {},
-  intelephense = {
-    settings = {
-      intelephense = {
-        files = { maxSize = 5000000 },
-      },
-    },
-  },
-  lua_ls = {
-    settings = {
-      Lua = {
-        diagnostics = { globals = { "vim" } },
-        workspace = {
-          checkThirdParty = false,
-          library = {
-            vim.env.VIMRUNTIME,
-          },
-        },
-      },
-    },
-  },
-}
+local tools = require("config.tools")
+local servers = tools.lsp
 
 return {
   {
