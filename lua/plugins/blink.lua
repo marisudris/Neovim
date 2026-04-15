@@ -9,12 +9,14 @@ return {
     snippets = {
       preset = "luasnip"
     },
+
     -- Completion menu settings
     completion = {
       menu = {
         border = "rounded",
         winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
       },
+
       -- Documentation menu settings
       documentation = {
         auto_show = true,
@@ -29,6 +31,7 @@ return {
         selection = { preselect = false, auto_insert = true },
       },
     },
+
     -- Function signature helper window settings
     signature = {
       enabled = true,

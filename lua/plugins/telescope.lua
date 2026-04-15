@@ -30,7 +30,6 @@ return {
     },
   },
   config = function()
-    -- You can add extra Telescope setup here (like themes or ignored patterns)
     require("telescope").setup({
       defaults = {
         mappings = {

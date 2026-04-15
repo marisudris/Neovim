@@ -18,6 +18,7 @@ return {
 
     local p = require("rose-pine.palette")
     local groups = {
+
       -- Border colors
       BlinkCmpMenuBorder          = { fg = p.pine, bg = "NONE" },
       BlinkCmpSignatureHelpBorder = { fg = p.pine, bg = "NONE" },
