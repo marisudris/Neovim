@@ -27,8 +27,11 @@ tools.lsp = {
 }
 
 tools.formatters = {
-  "php-cs-fixer",
-  "biome",
+  lua = { "stylua" },
+  php = { "php_cs_fixer" },
+  javascript = { "biome" },
+  typescript = { "biome" },
+  json = { "biome" },
 }
 
 tools.linters = {
