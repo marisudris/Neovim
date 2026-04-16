@@ -1,6 +1,6 @@
 # Neovim with Lazy plugins
 
-My Lazy setup with blink code completion and integrated LSPs.
+My Lazy setup with code completion, integrated LSPs, git and some quality of life plugins.
 Rose Pine themed.
 
 ![](./docs/screen-1.png)
@@ -9,11 +9,11 @@ Rose Pine themed.
 
 ## Plugins Used
 
-### Code completion and language server intergration
+### Code completion and language server integration
 
 - [Blink](https://github.com/saghen/blink.cmp) - a completion plugin with support for LSPs, cmdline, signature help, and snippets. It uses an optional custom fuzzy matcher for typo resistance. Customized window appearance.
-- [Luasnip](https://github.com/L3MON4D3/LuaSnip) - snippet engine.
-- [Mason](https://github.com/mason-org/mason.nvim) - package manager for LSPs.
+- [Luasnip](https://github.com/L3MON4D3/LuaSnip) - a snippet engine.
+- [Mason](https://github.com/mason-org/mason.nvim) - a package manager for LSPs.
     - [Mason tool installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim).
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - collection of LSP server configurations for native Neovim LSP client.
 
