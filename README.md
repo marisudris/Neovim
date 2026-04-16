@@ -33,7 +33,7 @@ Rose Pine themed.
 - [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim) - plugin for browsing the file system and other tree like structures in whatever style suits you, including sidebars, floating windows, netrw split style, or all of them at once. Custom keymaps by me.
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim) - a fast and easy to configure Neovim statusline written in Lua. Custom setup & colors - resembling my starship theme. TODO: extract color values in a global config.
 - [Alpha](https://github.com/goolord/alpha-nvim) - a fast and fully programmable splash screen & greeter for Neovim. Custom button menu config - mostly intergrating Telescope.
- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) - deep buffer integration for Git.
+- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) - deep buffer integration for Git.
 
 
 
