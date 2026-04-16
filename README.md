@@ -1,7 +1,11 @@
 # Neovim with Lazy plugins
 
 My Lazy setup with blink code completion and integrated LSPs.
-Rose Pine theme everywhere.
+Rose Pine themed.
+
+![](./docs/showcase-1.png)
+![](./docs/showcase-2.png)
+
 
 ## Plugins Used
 
