@@ -1,35 +1,3 @@
-local actions = {}
-
-function actions.find_files()
-  require("telescope.builtin").find_files()
-end
-
-function actions.live_grep()
-  require("telescope.builtin").live_grep()
-end
-
-function actions.grep_string()
-  require("telescope.builtin").grep_string({
-    search = vim.fn.input("Grep > "),
-  })
-end
-
-function actions.config()
-  require("telescope.builtin").find_files({
-    cwd = vim.fn.stdpath("config"),
-    prompt_title = "Neovim Config",
-    hidden = true,
-  })
-end
-
-function actions.todos()
-  vim.cmd("TodoTelescope")
-end
-
-function actions.quit()
-  vim.cmd.qa()
-end
-
 return {
   "goolord/alpha-nvim",
   dependencies = {
@@ -43,7 +11,12 @@ return {
 
     local config = theta.config
 
-    -- My custom silly header.
+    -- Import button actions from utils/alpha-actions.lua
+    local function cmd(action)
+      return string.format("<cmd>lua require('utils.alpha-actions').%s()<CR>", action, action)
+    end
+
+    -- ASCII header
     config.layout[2].val = {
       "   /:` ;: `:\\       :::. :::::::::::::::.    :::::::..   :::",
       "   /;` ;; `;\\       ;;`;;;;;;;;;;'''';;`;;   ;;;;``;;;;  ;;;",
@@ -53,6 +26,7 @@ return {
       'mM"    MM    "Mm   YMM   ""`  MMM   YMM   ""` MMMM   "W" MMM',
     }
 
+    -- Button config
     for _, section in ipairs(config.layout) do
       if section.type == "group" and section.val and section.val[1] and section.val[1].val == "Quick links" then
         section.val = {
@@ -64,12 +38,12 @@ return {
           { type = "padding", val = 1 },
 
           dashboard.button("e", "  New file", "<cmd>ene<CR>"),
-          dashboard.button("f", "󰈞  Find file", actions.find_files),
-          dashboard.button("g", "󰊄  Live grep", actions.live_grep),
-          dashboard.button("s", "󰱽  Grep string", actions.grep_string),
-          dashboard.button("t", "  TODOs", actions.todos),
-          dashboard.button("c", "  Config", actions.config),
-          dashboard.button("q", "󰅚  Quit", actions.quit),
+          dashboard.button("f", "󰈞  Find file", cmd("find_files")),
+          dashboard.button("g", "󰊄  Live grep", cmd("live_grep")),
+          dashboard.button("s", "󰱽  Grep string", cmd("grep_string")),
+          dashboard.button("t", "  TODOs", cmd("todos")),
+          dashboard.button("c", "  Config", cmd("config")),
+          dashboard.button("q", "󰅚  Quit", cmd("quit")),
         }
       end
     end
