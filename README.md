@@ -3,8 +3,8 @@
 My Lazy setup with blink code completion and integrated LSPs.
 Rose Pine themed.
 
-![](./docs/showcase-1.png)
-![](./docs/showcase-2.png)
+![](./docs/screen-1.png)
+![](./docs/screen-2.png)
 
 
 ## Plugins Used
