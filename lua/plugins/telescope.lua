@@ -1,19 +1,22 @@
 return {
   "nvim-telescope/telescope.nvim",
+  cmd = "Telescope",
   branch = "0.1.x",
   dependencies = { "nvim-lua/plenary.nvim" },
   keys = {
     {
       "<leader>pf",
-      function() require("telescope.builtin").find_files() end,
-      desc = "Find Files"
+      function()
+        require("telescope.builtin").find_files()
+      end,
+      desc = "Find Files",
     },
     {
       "<leader>ps",
       function()
         require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
       end,
-      desc = "Grep String"
+      desc = "Grep String",
     },
 
     {
@@ -21,7 +24,7 @@ return {
       function()
         require("telescope.builtin").live_grep()
       end,
-      desc = "Live Grep"
+      desc = "Live Grep",
     },
     {
       "<leader>st",

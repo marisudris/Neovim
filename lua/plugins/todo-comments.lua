@@ -1,5 +1,6 @@
 return {
   "folke/todo-comments.nvim",
+  cmd = { "TodoTelescope", "TodoQuickFix", "TodoLocList" },
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = function()
     local p = require("rose-pine.palette")
@@ -9,12 +10,12 @@ return {
 
       -- Mapping Folke's color names to Rose Pine palette
       colors = {
-        error   = { p.love },    -- Red/Pink
-        warning = { p.gold },    -- Yellow/Gold
-        info    = { p.pine },    -- Teal/Pine
-        hint    = { p.foam },    -- Cyan/Foam
-        default = { p.iris },    -- Purple
-        test    = { p.rose },    -- Rose/Pink
+        error = { p.love }, -- Red/Pink
+        warning = { p.gold }, -- Yellow/Gold
+        info = { p.pine }, -- Teal/Pine
+        hint = { p.foam }, -- Cyan/Foam
+        default = { p.iris }, -- Purple
+        test = { p.rose }, -- Rose/Pink
       },
       gui_style = {
         fg = "NONE",
@@ -26,5 +27,5 @@ return {
         comments_only = true,
       },
     }
-  end
+  end,
 }
