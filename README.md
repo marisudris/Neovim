@@ -36,6 +36,10 @@ Rose Pine themed.
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) - deep buffer integration for Git.
 
 
+## Dependencies
+
+- tar, unzip, npm, make: for Mason package installation
+- ripgrep: for telescope
 
 
 
